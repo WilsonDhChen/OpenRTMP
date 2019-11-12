@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8E05BC56-176F-45F0-B14C-37A4888A982E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>adapi</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ADAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>c:\mydll2013\adapi.dll</OutputFile>
+      <ImportLibrary>c:\mylib\msvc2013\adapi.lib</ImportLibrary>
+      <ModuleDefinitionFile>..\src\adapi.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>c:\mydll2013\adapi.pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\adapi.h" />
+    <ClInclude Include="..\src\adapi_def.h" />
+    <ClInclude Include="..\src\bfs.h" />
+    <ClInclude Include="..\src\md5.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\adapi.c" />
+    <ClCompile Include="..\src\backtrace.c" />
+    <ClCompile Include="..\src\base64.1.c" />
+    <ClCompile Include="..\src\base64ex.c" />
+    <ClCompile Include="..\src\crc.c" />
+    <ClCompile Include="..\src\date.c" />
+    <ClCompile Include="..\src\db_ext.c" />
+    <ClCompile Include="..\src\env_path.c" />
+    <ClCompile Include="..\src\file.c" />
+    <ClCompile Include="..\src\ini.c" />
+    <ClCompile Include="..\src\lst.c" />
+    <ClCompile Include="..\src\malloc_memory.c" />
+    <ClCompile Include="..\src\md5.c" />
+    <ClCompile Include="..\src\memory_buffer.c" />
+    <ClCompile Include="..\src\memory_buffer2.c" />
+    <ClCompile Include="..\src\mtx.c" />
+    <ClCompile Include="..\src\queue.c" />
+    <ClCompile Include="..\src\sha1.c" />
+    <ClCompile Include="..\src\str.c" />
+    <ClCompile Include="..\src\thread_ext.c" />
+    <ClCompile Include="..\src\thread_pool.c" />
+    <ClCompile Include="..\src\transfer.c" />
+    <ClCompile Include="..\src\win_util.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\adapi.def" />
+    <None Include="..\src\Makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

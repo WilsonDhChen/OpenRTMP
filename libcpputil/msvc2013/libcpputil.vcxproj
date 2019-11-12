@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4DE25DDC-FA42-475B-A5D3-C990EEDFFE14}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libcpputil</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBCPPUTIL_EXPORTS;_WIN32_LIBCPPUTIL_EXPORTS;_STLP_DONT_USE_AUTO_LINK;_STLP_NO_IOSTREAMS;_STL_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>../src/;../src/stlport;..\..\include;..\..\include\stlport;D:\svn\openssl-master\include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>c:/mydll2013/libcpputil.dll</OutputFile>
+      <AdditionalLibraryDirectories>c:/mylib/msvc2013;D:\svn\openssl-1.0.0g\out32dll;D:\svn\openssl-master;D:\svn\openssl-master\vs2008dll</AdditionalLibraryDirectories>
+      <AdditionalDependencies>adapi.lib;rde.lib;libmalloc2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>c:\mylib\msvc2013\libcpputil.lib</ImportLibrary>
+      <ModuleDefinitionFile>libcpputil.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>c:/mydll2013/libcpputil.pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\libcpputil.h" />
+    <ClInclude Include="..\..\include\libcpputil_config.h" />
+    <ClInclude Include="..\..\include\libcpputil_event.h" />
+    <ClInclude Include="..\..\include\libcpputil_net.h" />
+    <ClInclude Include="..\..\include\libcpputil_rtmp.h" />
+    <ClInclude Include="..\..\include\libcpputil_thread.h" />
+    <ClInclude Include="..\..\include\libcpputil_var.h" />
+    <ClInclude Include="..\src\libcpputil_def.h" />
+    <ClInclude Include="..\src\libcpputil_event_imp.h" />
+    <ClInclude Include="..\src\libcpputil_net_imp.h" />
+    <ClInclude Include="..\src\libcpputil_net_select.h" />
+    <ClInclude Include="..\src\libcpputil_net_udp.h" />
+    <ClInclude Include="..\src\libcpputil_thread_imp.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\libcpputil_amf.cpp" />
+    <ClCompile Include="..\src\libcpputil_config.cpp" />
+    <ClCompile Include="..\src\libcpputil_event.cpp" />
+    <ClCompile Include="..\src\libcpputil_ext.cpp" />
+    <ClCompile Include="..\src\libcpputil_global.cpp" />
+    <ClCompile Include="..\src\libcpputil_net_imp.cpp" />
+    <ClCompile Include="..\src\libcpputil_net_pub.cpp" />
+    <ClCompile Include="..\src\libcpputil_net_select.cpp" />
+    <ClCompile Include="..\src\libcpputil_net_udp.cpp" />
+    <ClCompile Include="..\src\libcpputil_obj.cpp" />
+    <ClCompile Include="..\src\libcpputil_rtmp.cpp" />
+    <ClCompile Include="..\src\libcpputil_test.cpp" />
+    <ClCompile Include="..\src\libcpputil_thread.cpp" />
+    <ClCompile Include="..\src\libcpputil_thread_imp.cpp" />
+    <ClCompile Include="..\src\libcpputil_var.cpp" />
+    <ClCompile Include="..\src\libcpputil_wait.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libcpputil.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

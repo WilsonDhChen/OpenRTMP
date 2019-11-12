@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmediasrv", "libmediasrv.vcxproj", "{B7D1980A-FCB0-4B66-8192-873B9FA0F66E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8E05BC56-176F-45F0-B14C-37A4888A982E} = {8E05BC56-176F-45F0-B14C-37A4888A982E}
+		{1BD9C28E-5F5B-4D5F-A78D-DD51460C5F9A} = {1BD9C28E-5F5B-4D5F-A78D-DD51460C5F9A}
+		{56FED8A2-7CC4-4564-A0E4-D82D288F1322} = {56FED8A2-7CC4-4564-A0E4-D82D288F1322}
+		{4DE25DDC-FA42-475B-A5D3-C990EEDFFE14} = {4DE25DDC-FA42-475B-A5D3-C990EEDFFE14}
+		{9FF61CDE-CD2B-4450-9CF8-B0D2BD440D9E} = {9FF61CDE-CD2B-4450-9CF8-B0D2BD440D9E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcpputil", "..\..\libcpputil\msvc2013\libcpputil.vcxproj", "{4DE25DDC-FA42-475B-A5D3-C990EEDFFE14}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8E05BC56-176F-45F0-B14C-37A4888A982E} = {8E05BC56-176F-45F0-B14C-37A4888A982E}
+		{1BD9C28E-5F5B-4D5F-A78D-DD51460C5F9A} = {1BD9C28E-5F5B-4D5F-A78D-DD51460C5F9A}
+		{9FF61CDE-CD2B-4450-9CF8-B0D2BD440D9E} = {9FF61CDE-CD2B-4450-9CF8-B0D2BD440D9E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rde", "..\..\rde\msvc2013\rde.vcxproj", "{9FF61CDE-CD2B-4450-9CF8-B0D2BD440D9E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8E05BC56-176F-45F0-B14C-37A4888A982E} = {8E05BC56-176F-45F0-B14C-37A4888A982E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "malloc2", "..\..\libmalloc\msvc2013\malloc2.vcxproj", "{1BD9C28E-5F5B-4D5F-A78D-DD51460C5F9A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "adapi", "..\..\adapi\msvc2013\adapi.vcxproj", "{8E05BC56-176F-45F0-B14C-37A4888A982E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpolarssl", "..\..\libpolarssl\msvc2013\libpolarssl.vcxproj", "{56FED8A2-7CC4-4564-A0E4-D82D288F1322}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mediasrv", "..\windows_test\mediasrv.vcxproj", "{9299EA5D-0274-481D-9B00-17AC942CA262}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B7D1980A-FCB0-4B66-8192-873B9FA0F66E} = {B7D1980A-FCB0-4B66-8192-873B9FA0F66E}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7D1980A-FCB0-4B66-8192-873B9FA0F66E}.Release|Win32.ActiveCfg = Release|Win32
+		{B7D1980A-FCB0-4B66-8192-873B9FA0F66E}.Release|Win32.Build.0 = Release|Win32
+		{4DE25DDC-FA42-475B-A5D3-C990EEDFFE14}.Release|Win32.ActiveCfg = Release|Win32
+		{4DE25DDC-FA42-475B-A5D3-C990EEDFFE14}.Release|Win32.Build.0 = Release|Win32
+		{9FF61CDE-CD2B-4450-9CF8-B0D2BD440D9E}.Release|Win32.ActiveCfg = Release|Win32
+		{9FF61CDE-CD2B-4450-9CF8-B0D2BD440D9E}.Release|Win32.Build.0 = Release|Win32
+		{1BD9C28E-5F5B-4D5F-A78D-DD51460C5F9A}.Release|Win32.ActiveCfg = Release|Win32
+		{1BD9C28E-5F5B-4D5F-A78D-DD51460C5F9A}.Release|Win32.Build.0 = Release|Win32
+		{8E05BC56-176F-45F0-B14C-37A4888A982E}.Release|Win32.ActiveCfg = Release|Win32
+		{8E05BC56-176F-45F0-B14C-37A4888A982E}.Release|Win32.Build.0 = Release|Win32
+		{56FED8A2-7CC4-4564-A0E4-D82D288F1322}.Release|Win32.ActiveCfg = Release|Win32
+		{56FED8A2-7CC4-4564-A0E4-D82D288F1322}.Release|Win32.Build.0 = Release|Win32
+		{9299EA5D-0274-481D-9B00-17AC942CA262}.Release|Win32.ActiveCfg = Release|Win32
+		{9299EA5D-0274-481D-9B00-17AC942CA262}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

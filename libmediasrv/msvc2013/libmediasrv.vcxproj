@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B7D1980A-FCB0-4B66-8192-873B9FA0F66E}</ProjectGuid>
+    <RootNamespace>libmediasrv</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../src/;../src/stlport;../../include/stlport;../../include;./;..\..\libpolarssl\src\include;..\..\libjsonc\include;../../libmp4v2/src/include;..\..\libspeex\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBMEDIASRV_EXPORTS;_STLP_DONT_USE_AUTO_LINK;_STLP_NO_IOSTREAMS;_RTMP_SUPPORT_;_RTMP_SSL;_MAX_CONNECTIONS=50000;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ws2_32.lib;adapi.lib;rde.lib;libcpputil.lib;libmalloc2.lib;libjsonc_mt.lib;libpolarssl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>c:/mydll2013/libmediasrv.dll</OutputFile>
+      <AdditionalLibraryDirectories>c:/mylib/msvc2013;..\..\..\ffmpeg-2.5.4\x264\smp\vs2013\bin;C:\openssl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>../src/libmediasrv.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>c:/mylib/msvc2013/libmediasrv.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\libmediasrv_app_win32.cpp" />
+    <ClCompile Include="..\src\libmediasrv_callback.cpp" />
+    <ClCompile Include="..\src\libmediasrv_genspspps.cpp" />
+    <ClCompile Include="..\src\libmediasrv_mdsource.cpp" />
+    <ClCompile Include="..\src\libmediasrv_rtmp_handshake_openssl.cpp" />
+    <ClCompile Include="..\src\libmediasrv_rtpparse.cpp" />
+    <ClCompile Include="..\src\libmediasrv_settingsrv.cpp" />
+    <ClCompile Include="..\src\libmediasrv_streampush.cpp" />
+    <ClCompile Include="..\src\libmediasrv_udp.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\adts_decode.cpp" />
+    <ClCompile Include="..\src\libmediasrv_app.cpp" />
+    <ClCompile Include="..\src\libmediasrv_config.cpp" />
+    <ClCompile Include="..\src\libmediasrv_ctx.cpp" />
+    <ClCompile Include="..\src\libmediasrv_main.cpp" />
+    <ClCompile Include="..\src\libmediasrv_netbuffer.cpp" />
+    <ClCompile Include="..\src\libmediasrv_rtmp.cpp" />
+    <ClCompile Include="..\src\libmediasrv_rtmp_handshake.cpp" />
+    <ClCompile Include="..\src\libmediasrv_session.cpp" />
+    <ClCompile Include="..\src\libmediasrv_ts.cpp" />
+    <ClCompile Include="..\src\libmediasrv_usr.cpp" />
+    <ClCompile Include="..\src\libmediasrv_util.cpp" />
+    <ClCompile Include="..\src\rtmp_protocol.cpp" />
+    <ClCompile Include="..\src\sps_decode.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\cdnsrv.h" />
+    <ClInclude Include="..\src\libmediasrv_app_win32.h" />
+    <ClInclude Include="..\src\libmediasrv_callback.h" />
+    <ClInclude Include="..\src\libmediasrv_rtpparse.h" />
+    <ClInclude Include="..\src\libmediasrv_settingsrv.h" />
+    <ClInclude Include="..\src\libmediasrv_udp.h" />
+    <ClInclude Include="..\src\tsio_ffmpeg\avcodec.h" />
+    <ClInclude Include="..\src\tsio_ffmpeg\bswap.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="..\src\adts_decode.h" />
+    <ClInclude Include="..\..\include\libav_types.h" />
+    <ClInclude Include="..\..\include\libets.h" />
+    <ClInclude Include="..\..\include\libmediasrv.h" />
+    <ClInclude Include="..\src\libmediasrv_app.h" />
+    <ClInclude Include="..\src\libmediasrv_config.h" />
+    <ClInclude Include="..\src\libmediasrv_ctx.h" />
+    <ClInclude Include="..\src\libmediasrv_def.h" />
+    <ClInclude Include="..\src\libmediasrv_netbuffer.h" />
+    <ClInclude Include="..\src\libmediasrv_rtmp.h" />
+    <ClInclude Include="..\src\libmediasrv_session.h" />
+    <ClInclude Include="..\src\libmediasrv_ts.h" />
+    <ClInclude Include="..\src\libmediasrv_usr.h" />
+    <ClInclude Include="..\src\rtmp_protocol.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\libmediasrv.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

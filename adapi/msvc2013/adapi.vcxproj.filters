@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{30c8ff79-7200-43f8-b1e7-f7d94d93fe5b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\adapi_def.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bfs.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\md5.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\adapi.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\adapi.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\backtrace.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\base64.1.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\base64ex.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crc.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\date.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\db_ext.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\file.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ini.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\lst.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\malloc_memory.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\md5.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\memory_buffer.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\memory_buffer2.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mtx.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\queue.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sha1.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\str.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\thread_ext.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\thread_pool.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\transfer.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win_util.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\env_path.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\adapi.def">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\src\Makefile">
+      <Filter>src</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+
+
+
+EXPORTS
+
+	LibCppUtilTest
+	LibCppUtilTestSend
+	LibCppUtilTestFinish
+	LibCppUtilInit		
+
+	LibCppUtilGetMemState 
+	DbgPrintfObjRef		 
+	
+	libcpputil_bind
+	libcpputil_bindIp6
+	libcpputil_bind_udp
+	libcpputil_bind_udp6
+	libcpputil_setblocking
+	libcpputil_close_soc

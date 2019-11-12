@@ -1,0 +1,34 @@
+
+EXENAME =libcpputiltest
+DESTDIR =/usr/local/bin/
+SRC     = unix_service.cpp
+
+INC_PATH    = -I/usr/include   -I../../include
+LIB_PATH    = -L/lib -L/usr/lib/mysql/ -L../../libsomac
+
+LIB_SO  = -ldl -lm 
+LIB_A   =  ../../libsomac/libadapi.a  ../../libsomac/librde.a
+
+LDFLAGS  =  -fPIC -rdynamic  -g -D_DEBUG_ -D_MAC_OSX_
+CC      = g++
+RM      = rm -f
+CCFLAGS    =  -fPIC -rdynamic  -g -D_DEBUG_ -D_MAC_OSX_
+NAME    = ${DESTDIR}/${EXENAME}
+
+OBJ=${SRC:.cpp=.o}
+
+all: ${NAME}
+
+${NAME}:${OBJ}              
+	${CC} ${LDFLAGS}   -o  ${NAME}  ${OBJ}  ${INC_PATH} ${LIB_PATH}  ${LIB_A} ${LIB_SO} 
+	${RM} ${OBJ}
+        
+${OBJ}:${SRC}
+	${CC}  ${CCFLAGS}   ${INC_PATH}  -c $?   
+
+.PHONY: clean re
+clean:
+	${RM} ${OBJ} ${NAME}
+re: clean all
+
+

@@ -1,0 +1,13 @@
+
+
+
+EXPORTS
+
+	LibCppUtilTest
+	LibCppUtilTestSend
+	LibCppUtilTestFinish
+	LibCppUtilInit		
+
+	LibCppUtilGetMemState 
+	DbgPrintfObjRef		 
+	
