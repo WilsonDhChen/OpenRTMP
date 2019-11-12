@@ -1,0 +1,118 @@
+#!/bin/sh 
+
+
+CURDIR=$(pwd)
+UNAME=$(uname)
+
+if [ "$UNAME" = "Linux"  ]; then
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
+fi
+
+export SSL=1
+export MEDIASRV=1
+
+if [ "$1" = "clean"  ]; then
+CLN=1
+fi
+
+export GCC_ATOMIC=1
+
+makesrc()
+{
+
+	if [ "$CLN" = 1  ] ; then
+    	make  -f Makefile clean
+    else
+    	
+    if [ "$1" = "-d"  ] ||  [ "$1" = "-D"  ] ||   [ "$1" = "d"  ] ||   [ "$1" = "D"  ] ; then
+
+        echo     ""
+        echo     ""
+        echo     "*******buiding  "$my_module" debug ************"
+        echo     ""
+        echo     ""
+    
+        if 
+		export DBG=1
+                ! make  -f Makefile 
+        then
+            echo     "----------"$my_module" debug error----------"
+            exit 1
+        #		break
+        fi
+    fi
+    
+    
+    
+        echo     ""
+        echo     ""
+        echo     "*******buiding  "$my_module" release ************"
+        echo     ""
+        echo     ""
+    
+        if 
+		export DBG=0
+                ! make  
+        then
+            echo     "----------"$my_module" release error----------"
+	    exit 1
+        #	break
+        fi
+        
+    fi
+	
+}
+
+
+
+for      my_module       in     "libpolarssl"      "libmalloc"   "adapi"   "rde"   "libcpputil"     "libmediasrv"  
+do
+
+path_module=$CURDIR/$my_module/src
+
+echo     ""
+echo     ""
+echo "---------building  "$path_module"---------"
+echo     ""
+echo     ""
+
+if 
+! cd  $path_module
+then
+continue
+fi
+
+makesrc $1
+
+
+cd ../../
+
+done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
